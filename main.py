@@ -85,7 +85,7 @@ def convert_graph(graph, from_type: str, to_type: str):
     edges = []
     num_vertices = 0
 
-    # ШАГ 1: Извлекаем дуги из исходного представления
+    # Извлекаем дуги из исходного представления
     if from_type == "матрица смежности":
         num_vertices = len(graph)
         for i in range(num_vertices):
@@ -120,7 +120,7 @@ def convert_graph(graph, from_type: str, to_type: str):
     else:
         raise ValueError("Неизвестное начальное представление.")
 
-    # ШАГ 2: Собираем требуемое представление
+    # Собираем требуемое представление
     if to_type == "список дуг":
         return edges
 
